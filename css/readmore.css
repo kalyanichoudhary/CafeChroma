@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Revolution&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Revolution&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Protest+Revolution&family=Protest+Strike&family=Roboto+Slab:wght@100..900&display=swap');
+:root{
+    --font1: "Roboto Slab", serif;
+    --font2:"Dancing Script", cursive;
+    --font3:"Protest Strike", sans-serif;
+    --main-color: #d3ad7f;
+    --black:#111112;
+    --bg:#ededf5;
+    --border:.1rem solid rgba(225,255,255,.3)
+}
+*{
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   outline: none; border: none;
+   text-decoration: none;
+   text-transform: capitalize;
+   transition: .2s linear;
+
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+
+}
+html::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+body{
+    background: var(--bg);
+}
+section{
+  padding: 2rem 7%;
+}
+.button{
+    border: 1px solid #000000;
+    background: none;
+    padding: 2px 5px;
+    font-size: 13px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 5px;
+    color: #000000;
+  
+  }
+  .button:hover{
+    color: rgb(140, 189, 140);
+  }
+  .button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background:rgb(140, 189, 140) ;
+    z-index: -1;
+    transition: 0.8s;
+    top: 0%;
+  }
+  .back-button {
+    position: fixed;
+    left: 20px;
+    top: 5%;
+    transform: translateY(-50%);
+    background-color: #000000;
+    color: #fff;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .back-button:hover {
+    background-color: rgb(140, 189, 140);
+  }
+  
+  .back-button i {
+    margin-right: 3px;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+  
+  .back-button.animated {
+    animation: fadeInLeft 0.5s ease forwards;
+  }
+  
+  .back-button.animated.fadeOutLeft {
+    animation: fadeOutLeft 0.5s ease forwards;
+  }
+  .right-button {
+    position: fixed;
+    right: 10px;
+    top: 5%;
+    transform: translateY(-50%);
+    background-color: #000000;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .right-button:hover {
+    background-color: rgb(140, 189, 140);
+  }
+  
+  .right-button i {
+    margin-right: 3px;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+  
+  .right-button.animated {
+    animation: fadeInLeft 0.5s ease forwards;
+  }
+  
+  .right-button.animated.fadeOutLeft {
+    animation: fadeOutLeft 0.5s ease forwards;
+  }
+
+.menu .box-cantainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+    gap: 1rem;
+  }
+  .menu .box-cantainer .box{
+    padding: 2rem;
+    text-align: center;
+    border: var(--border); 
+  }
+  .menu .box-cantainer .box img{
+    height: 11rem;
+  }
+  .menu .box-cantainer .box h2{
+     font-family: var(--font3);
+  }
+  .menu .box-cantainer .box h3{
+    color: #000000;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    font-family: var(--font2);
+  }
+  .menu .box-cantainer .box h4{
+    color: #000000;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    font-family: var(--font3);
+  }
+  .menu .box-cantainer .box .price{
+    color: #050605;
+    font-size: 2rem;
+    padding: 1rem 0;
+    font-family: var(--font1);
+  }
+  .menu .box-cantainer .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+  }
+  .menu .box-cantainer .box:hover{
+    background: #96bb7c;
+  }
+  .menu .box-cantainer .box:hover > *{
+    color: var(--black);
+  }
+  .image{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    border: 3px solid #000000;
+
+  }
+  .btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.3rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+    font-family: var(--font1);
+  }
+  .btn:hover{
+    letter-spacing: .1rem; 
+  }
+  .heading{
+    text-align: center;
+    color: #131313;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+    font-size: 2rem;
+    height: 3rem;
+    font-family: var(--font1);
+    
+  }
+   .imgs {
+    margin-bottom: 35px;
+    width: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    width: 20px;
+    height: 11rem; 
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    padding: 1.5rem 7rem;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;left: 0;right: 100%;
+  }
+  .menu .box-special{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem,1fr));
+    gap: 1rem;
+  }
+  .menu .box-special .box{
+    padding: 2rem;
+    text-align: center;
+    border: var(--border); 
+  }
+  .menu .box-special .box img{
+    height: 11rem;
+  }
+  .menu .box-special .box h2{
+     font-family: var(--font3);
+  }
+  .menu .box-special .box h3{
+    color: #000000;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    font-family: var(--font2);
+  }
+  .menu .box-cantainer .box h4{
+    color: #000000;
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    font-family: var(--font3);
+  }
+  .menu .box-special .box .price{
+    color: #050605;
+    font-size: 2rem;
+    padding: 1rem 0;
+    font-family: var(--font1);
+  }
+  .menu .box-special .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+  }
+  .menu .box-special .box:hover{
+    background: #96bb7c;
+  }
+  .menu .box-special .box:hover > *{
+    color: var(--black);
+  }
+  .image1{
+    height: 200px;
+    width: 200px;
+    border-radius: 10%;
+    border: 3px solid #000000;
+
+  }
+  .back-button2 {
+    position: fixed;
+    left: 20px;
+    top: 5%;
+    transform: translateY(-50%);
+    background-color: #000000;
+    color: #fff;
+    padding: 2px 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+  }
+  
+  .back-button2:hover {
+    background-color: rgb(140, 189, 140);
+  }
+  
+  .back-button2 i {
+    margin-right: 3px;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeOutLeft {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+  }
+  
+  .back-button2.animated {
+    animation: fadeInLeft 0.5s ease forwards;
+  }
+  
+  .back-button2.animated.fadeOutLeft {
+    animation: fadeOutLeft 0.5s ease forwards;
+  }
+  .button2{
+    border: 1px solid #000000;
+    background: none;
+    padding: 2px 5px;
+    font-size: 13px;
+    font-family: "montserrat";
+    cursor: pointer;
+    margin: 5px;
+    color: #000000;
+  
+  }
+  .button2:hover{
+    color: rgb(140, 189, 140);
+  }
+  .button2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background:rgb(140, 189, 140) ;
+    z-index: -1;
+    transition: 0.8s;
+    top: 0%;
+  }
